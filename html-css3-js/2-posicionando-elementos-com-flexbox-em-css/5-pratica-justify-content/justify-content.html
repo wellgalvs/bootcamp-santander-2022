@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - Justify Content</title>
+
+  <style>
+    .flex-container {
+      max-width: 400px;
+      border: 1px solid black;
+      margin: 0;
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    .flex-item {
+      background-color: blueviolet;
+      margin: 5px;
+      text-align: center;
+      color: white;
+    }
+
+    .flex-start {
+      justify-content: flex-start;
+    }
+
+    .flex-end {
+      justify-content: flex-end;
+    }
+
+    .flex-center {
+      justify-content: center;
+    }
+
+    .flex-sb {
+      justify-content: space-between;
+    }
+
+    .flex-sa {
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+  <h1>Flex Start</h1>
+  <section class="flex-container flex-start">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex End</h1>
+  <section class="flex-container flex-end">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex Center</h1>
+  <section class="flex-container flex-center">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex Space-Between</h1>
+  <section class="flex-container flex-sb">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex Space-Around</h1>
+  <section class="flex-container flex-sa">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+</body>
+</html>
