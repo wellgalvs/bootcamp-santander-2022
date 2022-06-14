@@ -41,9 +41,17 @@
     .flex-sa {
       justify-content: space-around;
     }
+
+    .column {
+      flex-direction: column;
+      min-height: 200px;
+    }
   </style>
 </head>
 <body>
+  <hr>
+  <h1>ROW</h1>
+  <hr>
   <h1>Flex Start</h1>
   <section class="flex-container flex-start">
     <div class="flex-item">1</div>
@@ -74,6 +82,44 @@
 
   <h1>Flex Space-Around</h1>
   <section class="flex-container flex-sa">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+  <hr>
+
+  <h1>COLUMN</h1>
+  <hr>
+  <h1>Flex Start Column</h1>
+  <section class="flex-container flex-start column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex End Column</h1>
+  <section class="flex-container flex-end column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex Center Column</h1>
+  <section class="flex-container flex-center column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex Space-Between Column</h1>
+  <section class="flex-container flex-sb column">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+  </section>
+
+  <h1>Flex Space-Around Column</h1>
+  <section class="flex-container flex-sa column">
     <div class="flex-item">1</div>
     <div class="flex-item">2</div>
     <div class="flex-item">3</div>
