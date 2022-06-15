@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos - Align Self</title>
+  <style>
+    .container {
+      display: flex;
+      max-width: 350px;
+      border: 1px solid black;
+      margin-bottom: 10px;
+    }
+
+    .align-container {
+      align-items: center;
+    }
+
+    .item {
+      background-color: orangered;
+      color: white;
+      margin: 5px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .center {
+      align-self: center;
+    }
+
+    .stretch {
+      align-self: stretch;
+    }
+
+    .baseline {
+      align-self: baseline;
+    }
+
+    .start {
+      align-self: flex-start;
+    }
+
+    .end {
+      align-self: flex-end;
+    }
+
+    .auto {
+      align-self: auto;
+    }
+
+    .direction {
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <h1>Row</h1>
+  <section class="container .align-container">
+    <div class="item">ASD</div>
+    <div class="item">124</div>
+    <div class="item">QIWOEUoqiuio</div>
+    <div class="item">1U8HJ81</div>
+  </section>
+
+  <section class="container">
+    <div class="item stretch">ASD</div>
+    <div class="item start">12ajdjai4</div>
+    <div class="item stretch">QIWOEUoqiuio</div>
+    <div class="item end">1U8HJ81</div>
+  </section>
+
+  <section class="container">
+    <div class="item stretch">ASD</div>
+    <div class="item start">12ajdjai4</div>
+    <div class="item stretch">QIWOEUoqiuio</div>
+  </section>
+
+  <h1>Column</h1>
+  <section class="container .align-container direction">
+    <div class="item">ASD</div>
+    <div class="item">124</div>
+    <div class="item">QIWOEUoqiuio</div>
+    <div class="item">1U8HJ81</div>
+  </section>
+
+  <section class="container direction">
+    <div class="item stretch">ASD</div>
+    <div class="item start">12ajdjai4</div>
+    <div class="item stretch">QIWOEUoqiuio</div>
+    <div class="item end">1U8HJ81</div>
+  </section>
+
+  <section class="container direction">
+    <div class="item stretch">ASD</div>
+    <div class="item start">12ajdjai4</div>
+    <div class="item stretch">QIWOEUoqiuio</div>
+</body>
+</html>
