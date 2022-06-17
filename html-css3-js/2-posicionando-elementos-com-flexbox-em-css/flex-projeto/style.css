@@ -21,6 +21,7 @@ a {
   max-width: 992px;
   margin: auto;
   width: 100%;
+  min-width: 320px;
 }
 
 header {
@@ -172,11 +173,18 @@ header .menu {
 #planos {
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 50px;
+}
+
+#planos h2 {
+  font-size: 32px;
 }
 
 .list-planos {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .item-plano {
@@ -184,6 +192,7 @@ header .menu {
   border: 5px solid #122A57;
   margin-right: 20px;
   padding: 10px;
+  max-width: 240px;
 }
 
 .item-plano .btn {
@@ -196,12 +205,13 @@ header .menu {
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .item-plano h3::after {
   content: "";
   background-color: #122A57;
-  width: '100%';
+  width: 100%;
   height: 3px;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -211,4 +221,85 @@ header .menu {
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.item-plano ul li {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.item-plano ul li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #122A57;
+  margin-right: 5px;
+}
+
+footer {
+  background-color: #122A57;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer {
+  justify-content: space-between;
+  color: #fff;
+}
+
+@media(max-width: 992px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .apresentacao {
+    flex-direction: column-reverse;
+  }
+
+  .apresentacao .texto-apresentacao {
+    width: 100%;
+  }
+
+  #quem-somos {
+    flex-direction: column-reverse;
+  }
+
+  #quem-somos img {
+    min-width: 320px;
+    margin: auto;
+  }
+
+  .list-servicos {
+    flex-direction: column;
+  }
+
+  .item-servico img {
+    width: 50%;
+    margin: auto;
+  }
+
+  .item-servico p {
+    margin-bottom: 10px;
+  }
+
+  .item-servico a {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .list-planos {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list-planos .item-plano {
+    max-width: 90%;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
