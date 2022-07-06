@@ -7,7 +7,7 @@ interface ICachorro {
 type CachorroSomenteLeitura = {
   readonly [K in keyof ICachorro]: ICachorro[K];
 }
-
+/*
 class MeuCachorro implements CachorroSomenteLeitura {
   nome;
   idade;
@@ -19,3 +19,4 @@ class MeuCachorro implements CachorroSomenteLeitura {
 }
 
 const cao = new MeuCachorro('Dog', 13);
+*/
