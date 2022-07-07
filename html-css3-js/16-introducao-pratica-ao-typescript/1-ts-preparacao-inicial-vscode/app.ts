@@ -4,3 +4,7 @@ function somarValores(n1: number, n2: number): number {
 }
 
 console.log(somarValores(1, 2));
+
+function printaValores(n1: number, n2: number): void {
+  console.log(n1 + n2);
+}
