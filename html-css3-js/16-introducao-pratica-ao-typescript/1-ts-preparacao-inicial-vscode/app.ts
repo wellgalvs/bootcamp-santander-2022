@@ -1,33 +1,56 @@
-let button = document.getElementById('button');
-let input1 = document.getElementById('input1') as HTMLInputElement;
-let input2 = document.getElementById('input2') as HTMLInputElement;
+const pessoa = {
+  nome: 'Mariana',
+  idade: 28,
+  profissao: 'Médica'
+}
 
-function somarNumeros(
-  n1: number,
-  n2: number,
-  devePrintar: boolean,
-  frase: string) {
-  let resultado = n1 + n2;
+const joaozinho: { nome: string, idade: number, profissao: string } = {
+  nome: 'Joaozinho',
+  idade: 25,
+  profissao: 'Designer'
+}
 
-  if (devePrintar) {
-    console.log(frase + resultado);
+const paula: { nome: string, idade: number, profissao: string } = {
+  nome: 'Paula',
+  idade: 27,
+  profissao: 'Desenvolvedora'
+}
+
+enum Profissao {
+  Professora,
+  Atriz,
+  Desenvolvedora,
+  Designer,
+  Médica
+}
+
+interface IPessoa {
+  nome: string,
+  idade: number,
+  profissao?: Profissao
+}
+
+interface IEstudante extends IPessoa {
+  materiais: string[]
+}
+
+const vanessa: IPessoa = {
+  nome: 'Vanessa',
+  idade: 29,
+  profissao: Profissao.Desenvolvedora
+}
+
+const jessica: IEstudante = {
+  nome: 'Jessica',
+  idade: 29,
+  profissao: Profissao.Desenvolvedora,
+  materiais: ['Cáculo I e II', 'Programação Linear']
+}
+
+function listar(lista: string[]) {
+  for (const item of lista) {
+    console.log('- ', item);
   }
-
-  return resultado;
 }
 
-let devePrintar = true;
-let frase = "O valor é "
-
-if (button) {
-  button.addEventListener('click', () => {
-    if (input1 && input2) {
-      somarNumeros(
-        Number(input1.value),
-        Number(input2.value),
-        devePrintar,
-        frase
-      );
-    }
-  });
-}
+listar(jessica.materiais);
