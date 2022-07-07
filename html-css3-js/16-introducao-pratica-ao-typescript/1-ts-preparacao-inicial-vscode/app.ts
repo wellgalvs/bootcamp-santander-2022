@@ -1,16 +1,13 @@
-let valorAny: any;
-valorAny = 3;
-valorAny = "texto";
-valorAny = true;
+type input = number | string;
 
-let valorString: string = 'Teste';
-valorString = valorAny;
-let valorString2: string = 'Testando';
-valorString2 = valorAny;
-
-function somarStrings(str1: string, str2: string) {
-  console.log(str1 + str2);
+function somarValores(input1: string | number, input2: string | number) {
+  if (typeof input1 === 'string' || typeof input2 === 'string') {
+    return input1.toString() + input2.toString();
+  } else {
+    return input1 + input2;
+  }
 }
 
-somarStrings(valorString, valorString2);
-somarStrings('Olá, ', ' como vai?');
+console.log(somarValores(1, 5));
+console.log(somarValores('Olá, ', 'tudo bem?'));
+console.log(somarValores('Hoje é dia ', 5));

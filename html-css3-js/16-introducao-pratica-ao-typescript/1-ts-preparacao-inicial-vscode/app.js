@@ -1,14 +1,12 @@
 "use strict";
-let valorAny;
-valorAny = 3;
-valorAny = "texto";
-valorAny = true;
-let valorString = 'Teste';
-valorString = valorAny;
-let valorString2 = 'Testando';
-valorString2 = valorAny;
-function somarStrings(str1, str2) {
-    console.log(str1 + str2);
+function somarValores(input1, input2) {
+    if (typeof input1 === 'string' || typeof input2 === 'string') {
+        return input1.toString() + input2.toString();
+    }
+    else {
+        return input1 + input2;
+    }
 }
-somarStrings(valorString, valorString2);
-somarStrings('Olá, ', ' como vai?');
+console.log(somarValores(1, 5));
+console.log(somarValores('Olá, ', 'tudo bem?'));
+console.log(somarValores('Hoje é dia ', 5));
