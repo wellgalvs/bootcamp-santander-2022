@@ -15,3 +15,4 @@ let stringTest2 = 'Agora vai!';
 if (typeof unknownValue === 'string') {
     stringTest2 = unknownValue;
 }
+// o unknown necessita de validação para ter sua atribuição aceita, o any não

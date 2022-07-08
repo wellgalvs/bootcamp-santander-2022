@@ -18,3 +18,5 @@ let stringTest2: string = 'Agora vai!'
 if (typeof unknownValue === 'string') {
   stringTest2 = unknownValue;
 }
+
+// o unknown necessita de validação para ter sua atribuição aceita, o any não
